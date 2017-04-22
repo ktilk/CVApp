@@ -7,9 +7,9 @@ using DAL.Interfaces;
 
 namespace DAL.Repositories
 {
-    public class SkillRepository : EFRepository<Skill>
+    public class SkillRepository : EFRepository<Skill>, ISkillRepository
     {
-        public SkillRepository(DbContext dbContext) : base(dbContext)
+        public SkillRepository(CVAppDbContext dbContext) : base(dbContext)
         {
         }
     }

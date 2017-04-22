@@ -5,14 +5,16 @@ using System.Threading.Tasks;
 using DAL;
 using Microsoft.AspNetCore.Mvc;
 using DAL.Repositories;
+using DAL.Interfaces;
+using Domain;
 
 namespace CVWebApplication.Controllers
 {
     public class ContactTypesController : Controller
     {
-        private readonly ContactTypeRepository _repo;
+        private readonly IContactTypeRepository _repo;
 
-        public ContactTypesController(ContactTypeRepository repo)
+        public ContactTypesController(IContactTypeRepository repo)
         {
             _repo = repo;
         }

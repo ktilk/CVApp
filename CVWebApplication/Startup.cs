@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using DAL.Interfaces;
+using DAL.Repositories;
 
 namespace CVWebApplication
 {
@@ -31,6 +33,8 @@ namespace CVWebApplication
             services.AddDbContext<CVAppDbContext>();
             // Add framework services.
             services.AddMvc();
+
+            services.AddScoped<IContactTypeRepository, ContactTypeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

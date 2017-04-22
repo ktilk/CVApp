@@ -96,5 +96,10 @@ namespace DAL.Repositories
             }
             dbEntityEntry.State = EntityState.Modified;
         }
+
+        public void SaveChanges()
+        {
+            DbContext.SaveChanges();
+        }
     }
 }

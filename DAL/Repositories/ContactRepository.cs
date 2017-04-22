@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using DAL.Interfaces;
 
 namespace DAL.Repositories
 {
-    public class ContactRepository : EFRepository<Contact>
+    public class ContactRepository : EFRepository<Contact>, IContactRepository
     {
-        public ContactRepository(DbContext dbContext) : base(dbContext)
+        public ContactRepository(CVAppDbContext dbContext) : base(dbContext)
         {
         }
     }

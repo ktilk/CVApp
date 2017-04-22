@@ -26,5 +26,7 @@ namespace DAL.Interfaces
         //delete
         void Delete(T entity);
         void Delete(params object[] id);
+
+        void SaveChanges();
     }
 }
